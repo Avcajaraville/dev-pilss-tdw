@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hollycssood</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/white-rabbit.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Hollycssood</h1>
+      <p>Showcase the power of CSS (and HTML) by showcasing movies related snippets</p>
+
+      <div aria-hidden="true" id="projector-wrapper">
+        <div class="projector-light">
+          <div class="cover"></div>
+          <div class="cover"></div>
+        </div>
+        <div class="projector-body">
+          <div class="lens-hold"></div>
+          <div class="lens"></div>
+        </div>
+        <div class="film-disk" id="film1">
+          <div class="fd-back">
+            <div class="fd-film"></div>
+            <div class="fd-bar"></div>
+            <div class="fd-bar2"></div>
+          </div>
+        </div>
+        <div class="film-disk" id="film2">
+          <div class="fd-back">
+            <div class="fd-film"></div>
+            <div class="fd-bar"></div>
+            <div class="fd-bar2"></div>
+          </div>
+        </div>
+      </div>
+      <p>Original pen by Mirko, <a href="https://codepen.io/MirkoWD/pen/JjPGJar">codepen</a>.</p>
+
+      <h2>Table of content:</h2>
+      <nav>
+        <ul>
+          <li>
+            <a href="#casablanca">Casablanca</a>
+          </li>
+          <li>
+            <a href="#blair-witch-project">The Blair Witch Project</a>
+          </li>
+          <li>
+            <a href="#matrix">Matrix</a>
+          </li>
+          <li>
+            <a href="#die-hard">Die Hard</a>
+          </li>
+          <li>
+            <a href="#lost-in-translation">Lost in Translation</a>
+          </li>
+        </ul>
+      </nav>
+
+      <section>
+        <h2 id="casablanca">Casablanca</h2>
+        <p>Demonstrate use of HTML audio tag.</p>
+        <img src="images/casablanca.jpg" alt="An image extracted from casablanca movie showing a piano player playing surrounded by posh people.">
+        <figure>
+          <figcaption>Play it once, Sam!</figcaption>
+          <audio controls src="audio/casablanca.mp3">
+            Your browser does not support the <code>audio</code> element.
+          </audio>
+        </figure>
+      </section>
+
+      <section>
+        <h2 id="blair-witch-project">The Blair Witch Project</h2>
+        <p>Demonstrate use of CSS filter property and keyframes for CSS animation.</p>
+        <div class="blair-witch-project-wrapper">
+          <img class="blair-witch-project-img" src="images/blair-witch-project.jpg" alt="An image extracted from The Blair Witch Porject movie showing the iconic main character in a very close to cmaera angle.">
+        </div>
+      </section>
+
+      <section>
+        <h2 id="matrix">Matrix</h2>
+        <p>Demonstrate how to achieve a keyboard typing effect via animation and simple CSS tricks.</p>
+        <button class="red-pill">Red pill</button>
+        <div class="matrix-container">
+          <div class="matrix">
+            <p>Wake up Neo...The matrix has you...</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2 id="die-hard">Die Hard</h2>
+        <p>Demonstrate how to implement a mosaic like gallery panel via CSS grid.</p>
+        <ul class="die-hard-grid">
+          <li class="landscape">
+            <img src="images/die-hard-1.jpg" alt="An image showing a skyscraper.">
+          </li>
+          <li>
+            <img src="images/die-hard-2.jpg" alt="An image showing a skyscraper.">
+          </li>
+          <li>
+            <img src="images/die-hard-3.jpg" alt="An image showing a skyscraper.">
+          </li>
+          <li class="landscape higher">
+            <img src="images/die-hard-4.jpg" alt="An image showing a christmas tree.">
+          </li>
+          <li>
+            <img src="images/die-hard-5.jpg" alt="An image showing a skyscraper.">
+          </li>
+          <li class="landscape">
+            <img src="images/die-hard-6.jpg" alt="An image showing a skyscraper.">
+          </li>
+          <li>
+            <img src="images/die-hard-7.jpg" alt="An image showing a skyscraper.">
+          </li>
+          <li class="landscape higher">
+            <img src="images/die-hard-8.jpg" alt="An image showing a skyscraper.">
+          </li>
+          <li>
+            <img src="images/die-hard-9.jpg" alt="An image showing a skyscraper.">
+          </li>
+          <li class="higher">
+            <img src="images/die-hard-10.jpg" alt="An image showing a skyscraper.">
+          </li>
+          <li class="landscape higher">
+            <img src="images/die-hard-11.jpg" alt="An image showing a skyscraper.">
+          </li>
+          <li class="higher">
+            <img src="images/die-hard-12.jpg" alt="An image showing a skyscraper.">
+          </li>
+          <li>
+            <img src="images/die-hard-13.jpg" alt="An image showing a skyscraper.">
+          </li>
+          <li class="landscape">
+            <img src="images/die-hard-14.jpg" alt="An image showing a skyscraper.">
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 id="lost-in-translation">Lost in Translation</h2>
+        <p>Nothing. There is nothing going on. Its the emptiness. The void.</p>
+        <div class="lost-in-translation-container"></div>
+      </section>
+
+    </main>
+  </body>
+</html>

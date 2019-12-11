@@ -1,0 +1,338 @@
+:root {
+  --spacer: 1rem;
+  --spacer-sm: calc(var(--spacer) / 2);
+  --body-bg-color: #D9B01C;
+  --body-color: #090909;
+  --base-border: 0.5rem solid #1C1C1C;
+  --image-max-width: 40rem;
+}
+
+body {
+  background: var(--body-bg-color);
+  color: var(--body-color);
+  padding: var(--spacer);
+  font-size: 2rem;
+}
+
+a {
+  color: #333333;
+}
+
+img {
+  border: var(--base-border);
+  max-width: var(--image-max-width);
+  display: block;
+}
+
+figure {
+  margin: var(--spacer) 0;
+}
+
+figcaption {
+  margin-bottom: var(--spacer-sm);
+}
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/*
+ * PROJECTOR
+ * ============================================================================
+ */
+
+#projector-wrapper {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  margin: 3rem;
+}
+
+.film-disk {
+  position: absolute;
+  height: 60%;
+  width: 60%;
+  animation: rot 2s infinite linear;
+}
+
+.fd-back {
+  height: 100%;
+  width: 100%;
+  background-color: gray;
+  border-radius: 50%;
+}
+
+.fd-film {
+  position: absolute;
+  height: 70%;
+  width: 70%;
+  top: 15%;
+  left: 15%;
+  background-color: rgb(50,50,50);
+  border-radius: 50%;
+}
+
+.fd-bar {
+  position: absolute;
+  height: 95%;
+  width: 15%;
+  top: 2.5%;
+  left: 42.5%;
+  background-color: gray;
+}
+
+.fd-bar2 {
+  position: absolute;
+  width: 95%;
+  height: 15%;
+  top: 42.5%;
+  left: 2.5%;
+  background-color: gray;
+}
+
+.fdd {
+  position: absolute;
+  height: 35%;
+  width: 35%;
+  top: 32.5%;
+  left: 32.5%;
+  background-color: gray;
+  border-radius: 50%;
+}
+
+#film1 {
+  top: -5%;
+  left: -20%;
+}
+
+#film2 {
+  top: -5%;
+  right: -5%;
+}
+
+.projector-body {
+  position: absolute;
+  height: 60%;
+  width: 90%;
+  top: 40%;
+  background-color: rgb(70,70,70);
+  border-radius: 20px;
+}
+
+.lens {
+  position: absolute;
+  height: 30%;
+  width: 20%;
+  left: 105%;
+  top: 40%;
+  background-color: gray;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.lens-hold {
+   position: absolute;
+  height: 20%;
+  width: 10%;
+  left: 100%;
+  top: 45%;
+  background-color: gray;
+}
+
+.projector-light {
+  position: absolute;
+  opacity: 0.8;
+  height: 60%;
+  width: 90%;
+  left: 110%;
+  top: 42.9%;
+  background-color: rgb(255,228,196);
+  animation: light 0.9s infinite;
+}
+
+.projector-light :nth-child(1) {
+  top: -15%;
+  transform: rotate(-12deg);
+}
+
+.projector-light :nth-child(2) {
+  bottom: -15%;
+  transform: rotate(12deg);
+}
+
+.cover {
+  position: absolute;
+  background-color: var(--body-bg-color);
+  height: 40%;
+  width: 115%;
+  left: -10%;
+  opacity: 1;
+}
+
+@keyframes rot {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes light {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+/*
+ * BLAIR WITCH PROJECT
+ * ============================================================================
+ */
+
+.blair-witch-project-wrapper {
+  border: var(--base-border);
+  max-width: var(--image-max-width);
+  overflow: hidden;
+}
+
+.blair-witch-project-img {
+  filter: grayscale(80%) blur(1px);
+  border: none;
+  animation: noise 2s infinite linear;
+}
+
+@keyframes noise {
+  11% {
+    filter: grayscale(0%) blur(0px);
+    transform: translateY(-10px) translateX(-10px) scale(1.2);
+  }
+  33% {
+    filter: grayscale(0%) blur(0px);
+    transform: translateY(-10px) translateX(10px) scale(1.1);
+  }
+  55% {
+    filter: grayscale(0%) blur(0px);
+    transform: translateY(10px) translateX(-10px) scale(1.4);
+  }
+  77% {
+    filter: grayscale(0%) blur(0px);
+    transform: translateY(10px) translateX(10px) scale(1.3);
+  }
+  0%, 22%, 44%, 66%, 88% {
+    filter: grayscale(80%) blur(1px);
+    transform: translateY(0px) translateX(0px) scale(1);
+  }
+}
+
+/*
+ * MATRIX
+ * ============================================================================
+ */
+
+.red-pill {
+  background-color: #db4d56;
+  border-radius: 40%;
+  font-size: 2rem;
+  padding: 1rem;
+  border: none;
+  display: block;
+}
+
+.matrix-container {
+  --container-width: 639px;
+  display: none;
+  position: fixed;
+  background-color: var(--body-color);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.matrix {
+  padding: var(--spacer);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.matrix p {
+  color: chartreuse;
+  width: var(--container-width);
+  text-transform: uppercase;
+  font-weight: bolder;
+  font-size: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 1.3rem ridge chartreuse;
+  animation: matrix 4s steps(30,end);
+}
+
+@keyframes matrix {
+  from {
+    width: 0px;
+  }
+  to {
+    width: var(--container-width);
+  }
+}
+
+/*
+ * DIE HARD
+ * ============================================================================
+ */
+
+.die-hard-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(auto-fill,minmax(200px, 1fr));
+  grid-auto-flow: dense;
+  background: var(--body-color);
+  border: var(--base-border);
+}
+
+.die-hard-grid img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+  border: none;
+  height: 100%;
+  width: 100%;
+}
+
+.landscape {
+  grid-column: auto / span 2;
+}
+
+
+.higher {
+  grid-row: auto / span 2;
+}
+
+/*
+ * LOST IN TRANSLATION
+ * ============================================================================
+ */
+.lost-in-translation-container {
+  width: var(--image-max-width);
+  height: var(--image-max-width);
+  border: var(--base-border);
+}
